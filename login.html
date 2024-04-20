@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #0c192c;
+      
+        }
+
+        .card {
+            margin: auto;
+            margin-top: 15%;
+            box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 30%;
+            border-radius: 5px;
+            padding: 16px;
+           
+        }
+
+        .card:hover {
+            box-shadow: 6px 6px 16px 6px rgba(150, 150, 150, 0.8);
+        }
+
+        .card form {
+            padding: 2px 16px;
+            margin-left: 33%;
+        }
+
+        label, input {
+            font-family: fantasy;
+        }
+
+        label {
+            color: white;
+        }
+
+        input {
+            background-color: black;
+            color: lightgreen;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: black;
+            color: lightgreen;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: blue;
+            transition: 0.2s;
+            border-radius: 10px;
+        }
+
+        button:active {
+            background-color: aliceblue;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <form>
+            <label for="username"> 👤 Username:</label> <br>
+            <input type="text" id="username" autocomplete="off"> <br>
+            <label for="password">&#128274 Password:</label> <br>
+            <input type="password" id="password"> <br> <br>
+            <button onclick="login()">Login</button>
+        </form>
+    </div>
+
+
+    
+</body>
+<script>
+    function login() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        if (username == "bigTaco" && password == "robot")
+            location.replace("/home.html");
+        else
+            alert("Invalid username or password");
+    }
+</script>
+</html>
